@@ -1,6 +1,5 @@
 
 # LEANDRO'S DFIR CHEATSHEET
----------------------------
 
 ## TOOLS:
 - [EXT] Check suspicious IPs for outgoing traffic (see ISP): https://whatismyipaddress.com
@@ -8,14 +7,9 @@
 - [EXT] Virustotal for searching by file hashes: https://www.virustotal.com/gui/home/upload
 - eventvwr.msc
 - regedit
-- **Windows Event Viewer**: For analyzing logs.
-- **PowerShell ISE**: For running scripts and automation.
-- **FTK Imager**: Useful for creating disk images and analyzing file systems.
-- **Wireshark**: For capturing and analyzing network traffic.
-- **NetworkMiner**: For extracting artifacts from network traffic.
 
 ## FILE HASHING IN POWERSHELL:
-C:\> Get-FileHash C:\path\to\suspicious\file.exe -Algorithm SHA1 | Format-List
+**C:\> Get-FileHash C:\path\to\suspicious\file.exe -Algorithm SHA1 | Format-List
 
 ## FOR STRANGE STARTUP PROGRAMS/SCHEDULED TASKS:
 - Startup scheduled tasks using the command prompt --> C:\> wmic startup list full
@@ -65,16 +59,6 @@ C:\> Get-FileHash C:\path\to\suspicious\file.exe -Algorithm SHA1 | Format-List
 - **Event ID 3001 [Application]**: Application crash (notifies of application failures).
 
 ## (REMINDER) DON'T FORGET TO LOOK HERE:
-C:\Windows\Temp
-C:\Users\%USERNAME%\AppData\Local\Temp
-C:\ProgramData
-
-## CHECKLIST FOR ANALYSIS:
-- Check for Indicators of Compromise (IoCs): 
-  - Look for known malicious IPs, hashes, or URLs associated with the incident.
-  
-- Examine the Event Log: 
-  - Filter by user accounts, source IP addresses, and event types to narrow down suspicious activities.
-  
-- Perform Memory Analysis: 
-  - Use tools like Volatility to analyze memory dumps for malware artifacts.
+**C:\Windows\Temp
+**C:\Users\%USERNAME%\AppData\Local\Temp
+**C:\ProgramData
